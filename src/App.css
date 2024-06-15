@@ -1,0 +1,13 @@
+.App {
+  overflow-x: hidden;
+}
+
+.a {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 340px) {
+  .App {
+    overflow-x: visible;
+  }
+}

@@ -1,0 +1,30 @@
+body {
+  background: rgb(174, 222, 238);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(174, 222, 238, 1) 0%,
+    rgba(236, 251, 255, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(174, 222, 238, 1) 0%,
+    rgba(236, 251, 255, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(174, 222, 238, 1) 0%,
+    rgba(236, 251, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aedeee",endColorstr="#ecfbff",GradientType=1);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Manrope Variable", "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
