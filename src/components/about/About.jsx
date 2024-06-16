@@ -56,7 +56,7 @@ const About = () => {
                 </a>
               </div>
               <div>
-                <a href="#linkedin">
+                <a href="https://www.linkedin.com/in/sumon-deb-742346314/">
                   <BiLogoLinkedin />
                 </a>
               </div>

@@ -25,7 +25,7 @@ const Contact = () => {
           </a>
         </div>
         <div>
-          <a href="#linkedin">
+          <a href="https://www.linkedin.com/in/sumon-deb-742346314/">
             <img src={linkedin} alt="linkedin" />
           </a>
         </div>
