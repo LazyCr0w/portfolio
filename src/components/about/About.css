@@ -156,55 +156,91 @@
 }
 
 .modal-content {
-  width: 50%;
-  height: 50%;
+  background-color: #ecfbff;
+  border-radius: 10px;
+  padding: 3rem;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 .modal-content form {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
   flex-direction: column;
-  padding-top: 50px;
+  gap: 2rem;
 }
 
-.form-container {
-  position: relative;
-  background-color: rgb(174, 222, 238);
-  border-radius: 10px;
-}
 .form-group {
-  margin-bottom: 2rem;
-}
-
-.form-group input {
-  width: clamp(120px, 50vw, 420px);
-  height: 2.5rem;
-  padding: 0 1.25rem;
-  border: 1px solid black;
-  border-radius: 2px;
-  margin: 0.625rem auto;
-  transition: all 250ms;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group label {
-  padding: 0 2rem;
-  font-size: larger;
-  font-weight: 900;
-  color: #1c2d47;
-}
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
-/* .form-group-submit { */
-/* Adjust styles for the submit button as needed */
-/* } */
+.form-group input,
+.form-group textarea {
+  padding: 1rem;
 
-.modal-open {
-  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #999;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  font-weight: italic;
+  opacity: 0.7;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  color: #333;
+  outline: 1px solid #007bff;
+}
+
+.submit-and-close {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.submit-and-close p {
+  font-weight: bold;
+}
+.sending {
+  color: blue;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+.form-group textarea {
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background: #eee;
 }
 
 @media screen and (max-width: 1620px) {
@@ -256,6 +292,14 @@
   .about-img img {
     width: 350px;
   }
+  .modal-content {
+    padding: 2rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -278,6 +322,10 @@
   }
   .typed-text {
     font-size: 18px;
+  }
+
+  .modal-content {
+    max-width: 90%;
   }
 }
 
