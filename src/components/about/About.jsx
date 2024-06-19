@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import profile from "../../images/profile-pic.png";
+import Modal from "./Modal";
 import "./About.css";
 import {
   BiLogoGmail,
@@ -11,6 +12,12 @@ import {
 import { BsTwitterX } from "react-icons/bs";
 
 const About = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
   const [text] = useTypewriter({
     words: [
       "I'm an enthusiastic web developer with a passion for creating user-friendly and visually appealing websites. I'm currently honing my skills in HTML, CSS and Javascript. I have been exploring the React.js library and pursuing MERN Stack to learn as much as possible about FullStack Web Dev. My strong foundation in computer science comes from my Bachelor's degree in the field, and I'm currently expanding my knowledge by pursuing a Master's degree in Computer Science at Assam University.",
@@ -35,9 +42,9 @@ const About = () => {
           </p>
         </div>
         <div className="about-button">
-          <a href="#contact" className="about-button-style">
+          <button className="about-button-style" onClick={toggleModal}>
             Contact
-          </a>
+          </button>
           <div className="social-container">
             <div className="social">
               <div>
@@ -73,6 +80,12 @@ const About = () => {
       <div className="about-img">
         <img src={profile} alt="profile" />
       </div>
+      {showModal && (
+        <Modal
+          className="modal-open"
+          onClose={() => setShowModal(false)}
+        ></Modal>
+      )}
     </div>
   );
 };

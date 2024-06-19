@@ -130,6 +130,7 @@
   padding: 12px 16px;
   text-decoration: none;
   text-overflow: ellipsis;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: all 0.14s ease-out;
   white-space: nowrap;
 }
@@ -139,6 +140,71 @@
 }
 .about-button-style:focus-visible {
   outline-offset: 1px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 50%;
+  height: 50%;
+}
+
+.modal-content form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.form-container {
+  position: relative;
+  background-color: rgb(174, 222, 238);
+  border-radius: 10px;
+}
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group input {
+  width: clamp(120px, 50vw, 420px);
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+}
+
+.form-group label {
+  padding: 0 2rem;
+  font-size: larger;
+  font-weight: 900;
+  color: #1c2d47;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* .form-group-submit { */
+/* Adjust styles for the submit button as needed */
+/* } */
+
+.modal-open {
+  display: block;
 }
 
 @media screen and (max-width: 1620px) {
